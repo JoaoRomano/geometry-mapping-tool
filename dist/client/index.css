@@ -1,0 +1,142 @@
+.renderers {
+    display: flex;
+}
+
+.label {
+    color: #000000;
+    font-family: sans-serif;
+    z-index: 10;
+}
+
+.label-projection-3d {
+    color: #000000;
+    font-family: sans-serif;
+    z-index: 10;
+}
+
+.point-tool {
+    color:#a9a9a9;
+    font-family: sans-serif;
+    z-index: 20;
+}
+
+#geometry3D {
+    width: 50vw;
+    height: 100vh;
+}
+
+#geometryMonge {
+    width: 50vw;
+    height: 100vh;
+}
+
+#geometryMongeToolbox {
+    position: absolute;
+    left: 50vw;
+    bottom: 0;
+    width: 50vw;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.geometryMongeToolboxItem {
+    width: 48px;
+    height: 48px;
+}
+
+.geometryMongeToolboxItem:hover {
+    cursor: pointer;
+}
+
+#pointTool {
+    position: relative;
+    overflow: hidden;
+    background-image: url('images/point-tool-btn.png');
+    background-color: white;
+}
+
+#horizontalPointTool {
+    position: absolute;
+    top: -48px;
+    background-image: url('images/point-horizontal-tool-btn.png');
+    background-color: white;
+}
+
+#frontalPointTool {
+    position: absolute;
+    top: -96px;
+    background-image: url('images/point-frontal-tool-btn.png');
+    background-color: white;
+}
+
+#lineTool {
+    position: relative;
+    overflow: hidden;
+    background-image: url('images/line-tool-btn.png');
+    background-color: white;
+}
+
+#horizontalLineTool {
+    position: absolute;
+    top: -48px;
+    background-image: url('images/line-horizontal-tool-btn.png');
+    background-color: white;
+}
+
+#frontalLineTool {
+    position: absolute;
+    top: -96px;
+    background-image: url('images/line-frontal-tool-btn.png');
+    background-color: white;
+}
+
+#planeTool {
+    position: relative;
+    overflow: hidden;
+    background-image: url('images/plane-tool-btn.png');
+    background-color: white;
+}
+
+#horizontalPlaneTool {
+    position: absolute;
+    top: -48px;
+    background-image: url('images/plane-horizontal-tool-btn.png');
+    background-color: white;
+}
+
+#frontalPlaneTool {
+    position: absolute;
+    top: -96px;
+    background-image: url('images/plane-frontal-tool-btn.png');
+    background-color: white;
+}
+
+#auxillaryLineTool {
+    position: relative;
+    overflow: hidden;
+    background-image: url('images/auxillary-line-tool-btn.png');
+    background-color: white;
+}
+
+#parallelLineTool {
+    position: absolute;
+    top: -48px;
+    background-image: url('images/auxillary-parallel-line-tool-btn.png');
+    background-color: white;
+}
+
+#perpendicularLineTool {
+    position: absolute;
+    top: -96px;
+    background-image: url('images/auxillary-perpendicular-line-tool-btn.png');
+    background-color: white;
+}
+
+#deleteTool {
+    position: relative;
+    overflow: hidden;
+    background-image: url('images/delete-tool-btn.png');
+    background-color: white;
+}
