@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Geometry Mapping Tool</title>
+        <link rel="stylesheet" href="index.css">
+        <style>
+            body {
+                overflow: hidden;
+                margin: 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="renderers">
+            <div id="geometry3D"></div>
+            <div id="geometryMonge"></div>
+            <div id="geometryMongeToolbox">
+                <div id="pointTool" class="geometryMongeToolboxItem">
+                    <div id="horizontalPointTool" class="geometryMongeToolboxItem"></div>
+                    <div id="frontalPointTool" class="geometryMongeToolboxItem"></div>
+                </div>
+                <div id="lineTool" class="geometryMongeToolboxItem">
+                    <div id="horizontalLineTool" class="geometryMongeToolboxItem"></div>
+                    <div id="frontalLineTool" class="geometryMongeToolboxItem"></div>
+                </div>
+                <div id="planeTool" class="geometryMongeToolboxItem">
+                    <div id="horizontalPlaneTool" class="geometryMongeToolboxItem"></div>
+                    <div id="frontalPlaneTool" class="geometryMongeToolboxItem"></div>
+                </div>
+                <div id="auxillaryLineTool" class="geometryMongeToolboxItem">
+                    <div id="parallelLineTool" class="geometryMongeToolboxItem"></div>
+                    <div id="perpendicularLineTool" class="geometryMongeToolboxItem"></div>
+                </div>
+                <div id="deleteTool" class="geometryMongeToolboxItem">
+                </div>
+            </div>
+        </div>
+        <script type="module" src="bundle.js"></script>
+    </body>
+</html>
