@@ -5,7 +5,7 @@ import { GeometryMongeDeleteTool } from "./GeometryMongeDeleteTool";
 import { GeometryMongeLineTool } from "./GeometryMongeLineTool";
 import { GeometryMongePlaneTool } from "./GeometryMongePlaneTool";
 import { GeometryMongePointTool } from "./GeometryMongePointTool";
-import { Tool } from "./Tool";
+import { ITool } from "./Tool";
 
 interface ITools {
     pointTool: GeometryMongePointTool,
@@ -17,7 +17,7 @@ interface ITools {
 
 export class ToolBox {
     tools: ITools;
-    activeTool: Tool | null;
+    activeTool: ITool | null;
     toolboxElement: HTMLElement | null;
 
     constructor(sceneMonge: GeometryMongeScene, scene3D: Geometry3DScene) {
@@ -75,7 +75,7 @@ export class ToolBox {
         }
     }
 
-    setTool(tool: Tool):void {
+    setTool(tool: ITool):void {
         if (this.activeTool) {
             this.activeTool.deactivate();
         }

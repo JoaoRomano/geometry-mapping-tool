@@ -9,6 +9,9 @@ import { createVector3, distanceBetweenTwoPointsVector3, equalsVector3, medianVe
 import { Geometry3DLineError } from "../../errors/Geometry3DLineError";
 import { LineModel } from "../../models/lines/LineModel";
 import { LineProjection3DModel } from "../../models/lineProjections3D/LineProjection3DModel";
+import { ConventionalLine } from "../../domain/ConventionalLine";
+import { TopLine } from "../../domain/TopLine";
+import { VerticalLine } from "../../domain/VerticalLine";
 
 export class Geometry3DLineService {
     database: Geometry3DData = Geometry3DData.getInstance();
@@ -244,7 +247,7 @@ export class Geometry3DLineService {
             let newLabels = [];
             newLabels.push(label);
             const lineModel = new LineModel(label, position, length, undefined, undefined, undefined, p1);
-            const newLine = new Line(newLabels, position, vector, lineModel);
+            const newLine = new VerticalLine(newLabels, position, vector, horizontalPointLineProjection, frontalLineProjection, lineModel);
             this.database.lines.push(newLine);
             return newLine;
         }
@@ -269,7 +272,7 @@ export class Geometry3DLineService {
             let newLabels = [];
             newLabels.push(label);
             const lineModel = new LineModel(label, position, length, undefined, undefined, horizontalAngle, p1);
-            const newLine = new Line(newLabels, position, vector, lineModel);
+            const newLine = new TopLine(newLabels, position, vector, horizontalLineProjection, frontalPointLineProjection, lineModel);
             this.database.lines.push(newLine);
             return newLine;
         }
@@ -295,7 +298,7 @@ export class Geometry3DLineService {
             let newLabels = [];
             newLabels.push(label);
             const lineModel = new LineModel(label, position, length, undefined, frontalAngle / 2, horizontalAngle / 2, p1);
-            const newLine = new Line(newLabels, position, vector, lineModel);
+            const newLine = new ConventionalLine(newLabels, position, vector, horizontalLineProjection, frontalLineProjection, lineModel);
             this.database.lines.push(newLine);
             return newLine;
         }
@@ -354,7 +357,7 @@ export class Geometry3DLineService {
             let newLabels = [];
             newLabels.push(label);
             const lineModel = new LineModel(label, position, length, Math.PI / 2 + frontalAngle, undefined, undefined, p1);
-            const newLine = new Line(newLabels, position, vector, lineModel);
+            const newLine = new ConventionalLine(newLabels, position, vector, horizontalLineProjection, frontalLineProjection, lineModel);
             this.database.lines.push(newLine);
             return newLine;
         }
@@ -415,7 +418,7 @@ export class Geometry3DLineService {
             let newLabels = [];
             newLabels.push(label);
             const lineModel = new LineModel(label, position, length, undefined, Math.PI / 2 + horizontalAngle, Math.PI / 2, p1);
-            const newLine = new Line(newLabels, position, vector, lineModel);
+            const newLine = new ConventionalLine(newLabels, position, vector, horizontalLineProjection, frontalLineProjection, lineModel);
             this.database.lines.push(newLine);
             return newLine;
         }
@@ -495,7 +498,7 @@ export class Geometry3DLineService {
             newLabels.push(label);
             const rotationZ = vector.x < 0 && vector.y > 0 || vector.x > 0 && vector.y < 0 ? vector.negate().angleTo(new Vector3(0, -Math.tan(frontalAngle), 1)) : vector.angleTo(new Vector3(0, -Math.tan(frontalAngle), 1));
             const lineModel = new LineModel(label, position, length, Math.PI / 2 + frontalAngle, undefined, rotationZ, p1);
-            const newLine = new Line(newLabels, position, vector, lineModel);
+            const newLine = new ConventionalLine(newLabels, position, vector, horizontalLineProjection, frontalLineProjection, lineModel);
             this.database.lines.push(newLine);
             return newLine;
         }

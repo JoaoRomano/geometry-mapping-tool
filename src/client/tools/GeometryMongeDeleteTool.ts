@@ -11,9 +11,9 @@ import { Geometry3DPlaneService } from "../services/geometry3D/Geometry3DPlaneSe
 import { Geometry3DPointService } from "../services/geometry3D/Geometry3DPointService";
 import { GeometryMongeLineService } from "../services/geometryMonge/GeometryMongeLineService";
 import { GeometryMongePointService } from "../services/geometryMonge/GeometryMongePointService";
-import { Tool } from "./Tool";
+import { ITool } from "./Tool";
 
-export class GeometryMongeDeleteTool implements Tool {
+export class GeometryMongeDeleteTool implements ITool {
     sceneMonge: GeometryMongeScene;
     scene3D: Geometry3DScene;
     pointMongeService: GeometryMongePointService;

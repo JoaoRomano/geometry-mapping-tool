@@ -13,9 +13,9 @@ import { Geometry3DPointService } from "../services/geometry3D/Geometry3DPointSe
 import { GeometryMongeLineService } from "../services/geometryMonge/GeometryMongeLineService";
 import { GeometryMongePointService } from "../services/geometryMonge/GeometryMongePointService";
 import { createVector2, generateAngle } from "../utils";
-import { Tool } from "./Tool";
+import { ITool } from "./Tool";
 
-export class GeometryMongeLineTool implements Tool {
+export class GeometryMongeLineTool implements ITool {
     sceneMonge: GeometryMongeScene;
     scene3D: Geometry3DScene;
     pointMongeService: GeometryMongePointService;

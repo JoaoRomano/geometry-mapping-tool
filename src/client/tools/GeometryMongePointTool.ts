@@ -7,9 +7,9 @@ import { Geometry3DScene } from "../scenes/Geometry3DScene";
 import { GeometryMongeScene } from "../scenes/GeometryMongeScene";
 import { Geometry3DPointService } from "../services/geometry3D/Geometry3DPointService";
 import { GeometryMongePointService } from "../services/geometryMonge/GeometryMongePointService";
-import { Tool } from "./Tool";
+import { ITool } from "./Tool";
 
-export class GeometryMongePointTool implements Tool {
+export class GeometryMongePointTool implements ITool {
     sceneMonge: GeometryMongeScene;
     scene3D: Geometry3DScene;
     pointMongeService: GeometryMongePointService;

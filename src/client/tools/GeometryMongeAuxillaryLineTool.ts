@@ -15,9 +15,9 @@ import { Geometry3DPlaneService } from "../services/geometry3D/Geometry3DPlaneSe
 import { GeometryMongeLineService } from "../services/geometryMonge/GeometryMongeLineService";
 import { GeometryMongePointService } from "../services/geometryMonge/GeometryMongePointService";
 import { perpendicularVector2 } from "../utils";
-import { Tool } from "./Tool";
+import { ITool } from "./Tool";
 
-export class GeometryMongeAuxillaryLineTool implements Tool {
+export class GeometryMongeAuxillaryLineTool implements ITool {
     sceneMonge: GeometryMongeScene;
     scene3D: Geometry3DScene;
     pointMongeService: GeometryMongePointService;

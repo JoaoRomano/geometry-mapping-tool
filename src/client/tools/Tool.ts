@@ -1,6 +1,6 @@
 import { Vector2 } from "three";
 
-export interface Tool {
+export interface ITool {
     active: boolean;
 
     activate():boolean;
